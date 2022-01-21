@@ -9,3 +9,5 @@ https://blog.csdn.net/u014600626/article/details/85002750
 处理服务器的json中的数字显示价格
 https://blog.csdn.net/u014600626/article/details/84991604
 
+实时获取网络状态, ping / 发请求
+https://blog.csdn.net/u014600626/article/details/52451550
