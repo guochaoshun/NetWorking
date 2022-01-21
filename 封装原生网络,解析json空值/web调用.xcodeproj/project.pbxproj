@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A31AB5279B0C6F00FFC10D /* PingFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A31AAF279B0C6F00FFC10D /* PingFoundation.m */; };
+		50A31AB6279B0C6F00FFC10D /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A31AB3279B0C6F00FFC10D /* PingHelper.m */; };
+		50A31AB7279B0C6F00FFC10D /* ULNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A31AB4279B0C6F00FFC10D /* ULNetworkHelper.m */; };
 		9C4DFDD6209BF9E40004ED9F /* NSNumber+EqualString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DFDD5209BF9E40004ED9F /* NSNumber+EqualString.m */; };
 		9CBBC0E821C2662200241ADA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBC0E721C2662200241ADA /* Person.m */; };
 		9CBBC0EB21C26A1E00241ADA /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBC0EA21C26A1E00241ADA /* NetWork.m */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50A31AAF279B0C6F00FFC10D /* PingFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingFoundation.m; sourceTree = "<group>"; };
+		50A31AB0279B0C6F00FFC10D /* PingFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingFoundation.h; sourceTree = "<group>"; };
+		50A31AB1279B0C6F00FFC10D /* ULNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULNetworkHelper.h; sourceTree = "<group>"; };
+		50A31AB2279B0C6F00FFC10D /* PingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingHelper.h; sourceTree = "<group>"; };
+		50A31AB3279B0C6F00FFC10D /* PingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingHelper.m; sourceTree = "<group>"; };
+		50A31AB4279B0C6F00FFC10D /* ULNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULNetworkHelper.m; sourceTree = "<group>"; };
 		9C4DFDD4209BF9E40004ED9F /* NSNumber+EqualString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+EqualString.h"; sourceTree = "<group>"; };
 		9C4DFDD5209BF9E40004ED9F /* NSNumber+EqualString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+EqualString.m"; sourceTree = "<group>"; };
 		9CBBC0E621C2662200241ADA /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -90,6 +99,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50A31AAE279B0C5800FFC10D /* NetworkStatus */ = {
+			isa = PBXGroup;
+			children = (
+				50A31AB0279B0C6F00FFC10D /* PingFoundation.h */,
+				50A31AAF279B0C6F00FFC10D /* PingFoundation.m */,
+				50A31AB2279B0C6F00FFC10D /* PingHelper.h */,
+				50A31AB3279B0C6F00FFC10D /* PingHelper.m */,
+				50A31AB1279B0C6F00FFC10D /* ULNetworkHelper.h */,
+				50A31AB4279B0C6F00FFC10D /* ULNetworkHelper.m */,
+			);
+			path = NetworkStatus;
+			sourceTree = "<group>";
+		};
 		9CF9F008208AF4EA00FFD2CB = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +147,7 @@
 				9CBBC0ED21C3550700241ADA /* NSDictionary+JsonLog.m */,
 				9CBBC0E621C2662200241ADA /* Person.h */,
 				9CBBC0E721C2662200241ADA /* Person.m */,
+				50A31AAE279B0C5800FFC10D /* NetworkStatus */,
 				9CF9F01A208AF4EA00FFD2CB /* Main.storyboard */,
 				9CF9F01D208AF50300FFD2CB /* Assets.xcassets */,
 				9CF9F01F208AF50300FFD2CB /* LaunchScreen.storyboard */,
@@ -282,8 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A31AB5279B0C6F00FFC10D /* PingFoundation.m in Sources */,
+				50A31AB7279B0C6F00FFC10D /* ULNetworkHelper.m in Sources */,
 				9CF9F019208AF4EA00FFD2CB /* ViewController.m in Sources */,
 				9CBBC0EE21C3550700241ADA /* NSDictionary+JsonLog.m in Sources */,
+				50A31AB6279B0C6F00FFC10D /* PingHelper.m in Sources */,
 				9CF9F024208AF50300FFD2CB /* main.m in Sources */,
 				9CBBC0E821C2662200241ADA /* Person.m in Sources */,
 				9CF9F016208AF4EA00FFD2CB /* AppDelegate.m in Sources */,
