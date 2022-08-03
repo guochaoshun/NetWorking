@@ -28,6 +28,17 @@
     }];
 }
 
+- (void)testMalloc {
+    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        char *s = NULL;
+        s = malloc(1024 * 1024 * 100);
+        strcpy(s, [NSUUID UUID].UUIDString.UTF8String);
+        // 必须需要释放, 不释放会有内存泄漏
+        free(s);
+        s = NULL;
+    }];
+}
+
 - (void)testJson {
     [self loadData:nil];
 
