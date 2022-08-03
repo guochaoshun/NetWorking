@@ -178,7 +178,7 @@
 
 - (void)pingFoundation:(PingFoundation *)pinger didReceivePingResponsePacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber
 {
-    //NSLog(@"didReceivePingResponsePacket, sequenceNumber = %@", @(sequenceNumber));
+    NSLog(@"didReceivePingResponsePacket,IP : %@ data:%@字节 sequenceNumber = %@",pinger.IPAddress, @(packet.length), @(sequenceNumber));
     [self endWithFlag:YES];
 }
 

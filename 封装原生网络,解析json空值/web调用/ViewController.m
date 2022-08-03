@@ -10,6 +10,8 @@
 #import "NSNumber+EqualString.h"
 #import "Person.h"
 #import "NetWork.h"
+#import "PingHelper.h"
+
 @interface ViewController ()
 
 @end
@@ -19,36 +21,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    PingHelper *pingHelper = [[PingHelper alloc] init];
+    pingHelper.host = @"www.baidu.com";
+    [pingHelper pingWithBlock:^(BOOL isSuccess, NSTimeInterval latency) {
+
+    }];
+}
+
+- (void)testJson {
     [self loadData:nil];
 
     NSDictionary * dic = @{
                            @"person":[[Person alloc]init]
                            };
     NSLog(@"%@",dic);
-    
+
     NSLog(@"--------------");
-    
+
     NSNumber * num = @(99.99);
     //    NSLog(@"num = %@",num);
     NSString * money = [NSString stringWithFormat:@"¥ %@",num];
     NSLog(@"money = %@",money);
     NSLog(@"--------------");
-    
-    
-    
+
     NSLog(@"%@",@(99.99).description);
     NSLog(@"%@",@(99.99).moneyDescription);
     NSLog(@"%@",@(99.99));
-    
+
     NSLog(@"%@",@(67.96).description);
     NSLog(@"%@",@(67.96).moneyDescription);
     NSLog(@"%@",@(67.96));
     NSLog(@"%@",@(2.2));
     NSLog(@"%@",@(199));
     NSLog(@"%@",@(321));
-    
-    
-    
 }
 
 - (IBAction)loadData:(id)sender {

@@ -52,6 +52,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <errno.h>
+#include <arpa/inet.h>
 
 #pragma mark * IPv4 and ICMPv4 On-The-Wire Format
 
@@ -693,12 +694,26 @@ static void SocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDataR
             if ( address.length >= sizeof(struct sockaddr) ) {
                 switch (addrPtr->sa_family) {
                     case AF_INET: {
+                        char *s = NULL;
+                        struct sockaddr_in *addr_in = (struct sockaddr_in *)addrPtr;
+                        s = malloc(INET_ADDRSTRLEN);
+                        inet_ntop(AF_INET, &(addr_in->sin_addr), s, INET_ADDRSTRLEN);
+                        self.IPAddress = [NSString stringWithFormat:@"%s", s];
+                        free(s);
+                        s = NULL;
                         if (self.addressStyle != PingFoundationAddressStyleICMPv6) {
                             self.hostAddress = address;
                             resolved = true;
                         }
                     } break;
                     case AF_INET6: {
+                        char *s = NULL;
+                        struct sockaddr_in6 *addr_in6 = (struct sockaddr_in6 *)addrPtr;
+                        s = malloc(INET6_ADDRSTRLEN);
+                        inet_ntop(AF_INET6, &(addr_in6->sin6_addr), s, INET6_ADDRSTRLEN);
+                        self.IPAddress = [NSString stringWithFormat:@"%s", s];
+                        free(s);
+                        s = NULL;
                         if (self.addressStyle != PingFoundationAddressStyleICMPv4) {
                             self.hostAddress = address;
                             resolved = true;

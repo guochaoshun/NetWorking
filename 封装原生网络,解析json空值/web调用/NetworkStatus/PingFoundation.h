@@ -128,6 +128,11 @@ typedef NS_ENUM(NSInteger, PingFoundationAddressStyle) {
 
 @property (nonatomic, assign, readonly) uint16_t nextSequenceNumber;
 
+/// 新增字段, ping服务器的ip地址, DNS解析成功后会有值
+/// 参考链接: https://www.cnblogs.com/lvlin/p/5747742.html
+/// https://github.com/lovesunstar/STPingTest
+@property (nonatomic, copy, nullable) NSString *IPAddress;
+
 - (void)start;
 // Starts the pinger object pinging.  You should call this after
 // you've setup the delegate and any ping parameters.

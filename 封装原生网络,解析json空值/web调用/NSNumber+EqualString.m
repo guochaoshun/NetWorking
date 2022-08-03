@@ -37,10 +37,10 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 // [NSString stringWithFormat:@"¥ %@",num] , 会调到这个方法
-- (NSString *)descriptionWithLocale:(id)locale{
-    NSLog(@"locale is %@",locale);
-    return [self description];
-}
+//- (NSString *)descriptionWithLocale:(id)locale{
+//    NSLog(@"locale is %@",locale);
+//    return [self description];
+//}
 #pragma clang diagnostic pop
 
 
